@@ -1,12 +1,17 @@
 import './App.css'
-import { Login } from './components/Login'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import AuthCallback from './pages/AuthCallback'
 
 function App() {
 
   return (
     <>
-      <h2>Aplicacion para gestion de bibliotecas</h2>
-      <Login></Login>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/auth/callback' element={<AuthCallback />}></Route>
+      
+      </Routes>
     </>
   )
 }
