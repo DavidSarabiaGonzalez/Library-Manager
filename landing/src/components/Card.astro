@@ -1,0 +1,16 @@
+---
+interface Props {
+  img: ImageMetadata;
+  title: string;
+  description: string;
+  class?: string;
+}
+
+const { img, title, description, class: className } = Astro.props;
+---
+
+<article class="p-7 shadow-lg w-90 h-70 m-6 border border-gray-200 rounded-lg">
+  <img src={img.src} alt="Image of the card" class="w-15 h-15" />
+  <h4 class="font-bold text-2xl text-text-primary my-4">{title}</h4>
+  <p class="text-text-secondary text-lg">{description}</p>
+</article>

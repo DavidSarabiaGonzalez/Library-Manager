@@ -1,0 +1,32 @@
+---
+import LogoIcon from "../assets/Logo.svg";
+import GitHubIcon from "../assets/GitHub.svg";
+import MailIcon from "../assets/Mail.svg";
+
+const date = new Date();
+const year = date.getFullYear();
+---
+
+<footer
+  class="w-full h-20 border-t-4 border-[#cebdac] grid grid-cols-3 items-center"
+>
+  <a
+    href="/"
+    class="flex justify-start items-center ml-25 hover:scale-105 transition-transform"
+  >
+    <LogoIcon />
+    <h4 class="font-bold text-lg text-text-primary">Library Manager</h4>
+  </a>
+
+  <p class="font-bold text-center">© {year} David</p>
+
+  <div class="flex justify-end items-center gap-x-4 mr-25">
+    <a href="mailto:davidsarabiagonzalez06@gmail.com">
+      <MailIcon class={"size-10"} />
+    </a>
+
+    <a href="https://github.com/DavidSarabiaGonzalez/Library-Manager"
+      ><GitHubIcon class={"size-10 bg-black rounded-full"} />
+    </a>
+  </div>
+</footer>

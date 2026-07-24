@@ -1,0 +1,35 @@
+---
+import Card from "./Card.astro";
+
+import File from "../assets/file.svg";
+import Books from "../assets/books.svg";
+import Clock from "../assets/clock.svg";
+---
+
+<section class="min-h-[80vh] bg-bg-page">
+  <p class="text-center">EL PROBLEMA</p>
+  <h2
+    class="mx-auto max-w-2xl text-center text-text-primary font-extrabold text-4xl mt-5"
+  >
+    Gestionar una biblioteca no debería ser tan complicado.
+  </h2>
+
+  <div class="flex items-center justify-center my-10">
+    <Card
+      img={File}
+      title="Demasiado papeleo"
+      description="Gestionar registros manualmente dificulta encontrar información y aumenta el riesgo de errores."
+    />
+    <Card
+      img={Books}
+      title="Falta de control"
+      description="No saber qué libros están disponibles, prestados o pendientes de devolución complica la gestión diaria."
+    />
+
+    <Card
+      img={Clock}
+      title="Pérdida de tiempo"
+      description="Los procesos manuales hacen que préstamos y devoluciones sean más lentos de lo necesario."
+    />
+  </div>
+</section>

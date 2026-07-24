@@ -1,0 +1,40 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<section
+  class="bg-bg-primary h-[80vh] flex items-center justify-center box-border"
+>
+  <div class="flex-col max-w-xl mx-auto pl-6">
+    <h1 class="text-6xl text-text-primary">
+      <strong>
+        Digitaliza tu biblioteca. Gestiona libros, usuarios y prestamos desde un
+        unico lugar.
+      </strong>
+    </h1>
+
+    <p class="text-text-secondary text-lg mt-6 mb-6">
+      Library Manager es una plataforma diseñada para que bibliotecas puedan
+      organizar su catalogo, controlar prestamos y ofrecer una mejor experiencia
+      a los usuarios.
+    </p>
+
+    <div>
+      <button
+        class="bg-primary cursor-pointer p-3 mr-6 rounded font-semibold text-white text-lg hover:scale-110 hover:bg-primary-dark transition-all"
+      >
+        Crear biblioteca
+      </button>
+      <button
+        class="bg-gray-300 p-3 rounded cursor-pointer font-semibold text-lg hover:scale-110 transition-transform"
+        >Ver como funciona</button
+      >
+    </div>
+  </div>
+
+  <img
+    src="https://placehold.net/600x400.png"
+    alt="placeholder"
+    class="rounded-l-md shadow-lg w-1/2"
+  />
+</section>

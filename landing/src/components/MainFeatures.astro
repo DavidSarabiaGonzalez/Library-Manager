@@ -1,0 +1,36 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+---
+
+<section
+  class="min-h-[90vh] bg-bg-page flex flex-col justify-baseline items-center"
+>
+  <h2
+    class="max-w-2xl text-center text-text-primary font-extrabold text-4xl mt-18"
+  >
+    Todo lo que necesitas para gestionar una biblioteca.
+  </h2>
+
+  <div class="flex items-center m-6 justify-center my-10">
+    <FeatureCard
+      img="https://placehold.net/600x400.png"
+      title="Gestión de libros"
+      description="Organiza tu catálogo, añade nuevos títulos, gestiona autores, categorías y controla cada ejemplar disponible desde un único lugar."
+      alt="Gestión del catálogo de libros"
+    />
+
+    <FeatureCard
+      img="https://placehold.net/600x400.png"
+      title="Control de préstamos"
+      description="Registra préstamos y devoluciones, consulta el historial completo y conoce en todo momento la disponibilidad de cada ejemplar."
+      alt="Gestión de préstamos de libros"
+    />
+
+    <FeatureCard
+      img="https://placehold.net/600x400.png"
+      title="Usuarios y roles"
+      description="Administra usuarios con distintos niveles de acceso, gestiona clientes registrados o sin cuenta y mantén toda la biblioteca organizada."
+      alt="Gestión de usuarios y roles"
+    />
+  </div>
+</section>
