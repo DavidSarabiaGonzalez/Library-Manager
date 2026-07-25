@@ -3,38 +3,42 @@ import Image from "astro/components/Image.astro";
 ---
 
 <section
-  class="bg-bg-primary h-[80vh] flex items-center justify-center box-border"
+  class="container mx-auto flex flex-col items-center justify-center gap-12 px-6 py-6 lg:min-h-screen lg:flex-row"
 >
-  <div class="flex-col max-w-xl mx-auto pl-6">
-    <h1 class="text-6xl text-text-primary">
-      <strong>
-        Digitaliza tu biblioteca. Gestiona libros, usuarios y prestamos desde un
-        unico lugar.
-      </strong>
+  <div class="max-w-2xl text-center lg:text-left">
+    <h1
+      class="text-4xl font-bold leading-tight text-text-primary sm:text-5xl lg:text-6xl"
+    >
+      Digitaliza tu biblioteca. Gestiona libros, usuarios y préstamos desde un
+      único lugar.
     </h1>
 
-    <p class="text-text-secondary text-lg mt-6 mb-6">
+    <p class="mt-6 text-lg leading-relaxed text-text-secondary">
       Library Manager es una plataforma diseñada para que bibliotecas puedan
-      organizar su catalogo, controlar prestamos y ofrecer una mejor experiencia
+      organizar su catálogo, controlar préstamos y ofrecer una mejor experiencia
       a los usuarios.
     </p>
 
-    <div>
+    <div
+      class="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
+    >
       <button
-        class="bg-primary cursor-pointer p-3 mr-6 rounded font-semibold text-white text-lg hover:scale-110 hover:bg-primary-dark transition-all"
+        class="rounded bg-primary px-6 py-3 text-lg font-semibold text-white transition hover:scale-105 hover:bg-primary-dark cursor-pointer"
       >
         Crear biblioteca
       </button>
+
       <button
-        class="bg-gray-300 p-3 rounded cursor-pointer font-semibold text-lg hover:scale-110 transition-transform"
-        >Ver como funciona</button
+        class="rounded bg-gray-300 px-6 py-3 text-lg font-semibold transition hover:scale-105 hover:contrast-90 cursor-pointer"
       >
+        Ver cómo funciona
+      </button>
     </div>
   </div>
 
   <img
     src="https://placehold.net/600x400.png"
-    alt="placeholder"
-    class="rounded-l-md shadow-lg w-1/2"
+    alt="Vista previa de Library Manager"
+    class="w-full max-w-xl rounded-xl shadow-xl"
   />
 </section>

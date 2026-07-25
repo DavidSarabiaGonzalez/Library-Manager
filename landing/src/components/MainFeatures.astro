@@ -3,15 +3,17 @@ import FeatureCard from "./FeatureCard.astro";
 ---
 
 <section
-  class="min-h-[90vh] bg-bg-page flex flex-col justify-baseline items-center"
+  class="min-h-[90vh] mx-2 bg-bg-page flex flex-col justify-baseline items-center"
 >
   <h2
-    class="max-w-2xl text-center text-text-primary font-extrabold text-4xl mt-18"
+    class="max-w-2xl text-center text-text-primary font-extrabold text-4xl mt-18 text-pretty"
   >
     Todo lo que necesitas para gestionar una biblioteca.
   </h2>
 
-  <div class="flex items-center m-6 justify-center my-10">
+  <div
+    class="flex flex-col justify-end items-center lg:flex-row lg:items-center lg:justify-center m-6 my-10"
+  >
     <FeatureCard
       img="https://placehold.net/600x400.png"
       title="Gestión de libros"
