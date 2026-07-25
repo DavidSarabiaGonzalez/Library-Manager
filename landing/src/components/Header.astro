@@ -3,42 +3,77 @@ import Logo from "../assets/logo.svg";
 ---
 
 <header
-  class="fixed top-0 w-full justify-center items-center flex h-15 backdrop-blur-lg z-50"
+  class="fixed top-0 w-full justify-between items-center flex h-15 backdrop-blur-lg z-50 px-2 lg:px-24"
 >
-  <nav class="w-full">
-    <div class="flex items-center justify-between px-6 lg:px-24">
-      <a href="/" class="flex items-center gap-3">
-        <Logo class="w-10 h-10" />
-        <span class="font-semibold text-lg"> Library Manager </span>
-      </a>
+  <div class="flex items-center justify-center">
+    <a href="/" class="flex items-center justify-center lg:gap-x-2">
+      <Logo class="size-10" />
+      <span class="font-semibold text-lg"> Library Manager </span>
+    </a>
+  </div>
 
-      <ul class="hidden lg:flex lg: items-center gap-x-6">
-        <li>
-          <a href="/">Inicio</a>
-        </li>
-        <li>
-          <a href="/">Funcionalidades</a>
-        </li>
-        <li>
-          <a href="/">Contacto</a>
-        </li>
-        <li>
-          <a href="https://github.com/DavidSarabiaGonzalez/Library-Manager">
-            Github
-          </a>
-        </li>
-        <li>
-          <a href="/">Política de privacidad</a>
-        </li>
-      </ul>
-    </div>
+  <nav class="hidden lg:flex lg: items-center gap-x-6">
+    <ul class="hidden lg:flex gap-8 pr-6 border-r-2">
+      <li><a href="#funcionalidades">Funcionalidades</a></li>
+      <li><a href="#dashboard">Cómo funciona</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <a href="">Entrar</a>
+    <a href="">Crear biblioteca</a>
   </nav>
 
-  <button class="lg:hidden mr-6 text-2xl">☰</button>
+  <button id="menu-button" class="lg:hidden mr-6 text-2xl">☰</button>
+
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-100 hidden h-dvh w-screen flex-col items-center justify-center bg-black/80 backdrop-blur-xl lg:hidden"
+  >
+    <button
+      id="close-button"
+      class="absolute right-6 top-5 text-3xl text-white"
+    >
+      ✕
+    </button>
+
+    <ul
+      class="flex flex-col items-center justify-center gap-6 text-2xl text-white font-semibold"
+    >
+      <div class="flex flex-col gap-6 text-center text-2xl border-b-2">
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#dashboard">Cómo funciona</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li></li>
+      </div>
+
+      <div class="flex flex-col gap-6 text-center text-2xl">
+        <li><a href="">Entrar</a></li>
+        <li><a href="">Crear biblioteca</a></li>
+      </div>
+    </ul>
+  </div>
 </header>
 
-<style>
-  a {
-    margin-right: 1rem;
-  }
-</style>
+<script>
+  const openButton = document.querySelector("#menu-button");
+  const closeButton = document.querySelector("#close-button");
+  const menu = document.querySelector("#mobile-menu");
+
+  const closeMenu = () => {
+    menu?.classList.add("hidden");
+    menu?.classList.remove("flex");
+    document.body.classList.remove("overflow-hidden");
+  };
+
+  openButton?.addEventListener("click", () => {
+    menu?.classList.remove("hidden");
+    menu?.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
+  });
+
+  closeButton?.addEventListener("click", closeMenu);
+
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

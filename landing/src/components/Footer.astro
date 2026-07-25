@@ -8,25 +8,16 @@ const year = date.getFullYear();
 ---
 
 <footer
-  class="w-full h-20 border-t-4 border-[#cebdac] grid grid-cols-3 items-center"
+  id="contacto"
+  class="w-full h-20 border-t-4 border-[#cebdac] flex justify-between items-center px-10 lg:px-20"
 >
-  <a
-    href="/"
-    class="flex justify-start items-center ml-25 hover:scale-105 transition-transform"
-  >
-    <LogoIcon />
-    <h4 class="font-bold text-lg text-text-primary">Library Manager</h4>
+  <a href="mailto:davidsarabiagonzalez06@gmail.com">
+    <MailIcon class={"size-7 lg:size-10"} />
   </a>
 
-  <p class="font-bold text-center">© {year} David</p>
+  <p class="font-bold text-sm">© {year} David</p>
 
-  <div class="flex justify-end items-center gap-x-4 mr-25">
-    <a href="mailto:davidsarabiagonzalez06@gmail.com">
-      <MailIcon class={"size-10"} />
-    </a>
-
-    <a href="https://github.com/DavidSarabiaGonzalez/Library-Manager"
-      ><GitHubIcon class={"size-10 bg-black rounded-full"} />
-    </a>
-  </div>
+  <a href="https://github.com/DavidSarabiaGonzalez/Library-Manager"
+    ><GitHubIcon class={"size-7 lg:size-9 bg-black rounded-full"} />
+  </a>
 </footer>
