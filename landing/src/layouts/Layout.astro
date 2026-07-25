@@ -20,10 +20,12 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>Library Manager - Home</title>
   </head>
-  <body class="bg-[#E1E4E9]">
+  <body class="w-screen">
     <Header />
 
-    <main class="max-w-7xl mx-auto shadow-2xl pt-20 min-h-full bg-bg-page">
+    <main
+      class="max-w-screen md:max-w-7xl mx-auto shadow-2xl pt-20 bg-bg-page overflow-x-hidden"
+    >
       <slot />
     </main>
   </body>
@@ -35,6 +37,6 @@ import "../styles/global.css";
   }
 
   body {
-    margin: 0;
+    margin: 0 auto;
   }
 </style>
