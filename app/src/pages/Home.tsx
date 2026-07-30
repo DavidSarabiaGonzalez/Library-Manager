@@ -1,11 +1,16 @@
-import { Login } from "../components/Login";
+import Header from "../sections/Header";
+import SideBar from "../sections/SideBar";
+import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
-        <h2 className="">Aplicacion para gestion de bibliotecas</h2>
-        <Login></Login>
+      <div className="zones-container min-w-full overflow-hidden min-h-screen bg-gray-200 ">
+        <Header />
+        <SideBar />
+        <main className="[grid-area:main] m-4 flex flex-col gap-6 justify-start items-center overflow-hidden">
+          <Outlet />
+        </main>
       </div>
     </>
   );
