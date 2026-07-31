@@ -21,7 +21,7 @@ export const NavigationLink = ({ to, icon, text }: NavigationLinkProps) => {
             {icon}
           </picture>
 
-          <h4 className="font-semibold text-sm lg:text-lg">{text}</h4>
+          <h2 className="font-semibold text-sm lg:text-lg">{text}</h2>
         </div>
       )}
     </NavLink>
