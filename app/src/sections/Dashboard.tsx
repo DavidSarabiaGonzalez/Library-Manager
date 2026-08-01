@@ -42,7 +42,6 @@ export default function DashBoard() {
     { time: "2026-07-05", value: 20 },
     { time: "2026-07-06", value: 28 },
   ];
-  console.log(stats);
   return (
     <>
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">

@@ -1,5 +1,6 @@
-import { BellIcon, LoupeIcon } from "../assets/icons/Icons";
+import { BellIcon } from "../assets/icons/Icons";
 import { useLocation } from "react-router-dom";
+import SearchBar from "../components/SearchBar";
 
 export default function Header() {
   const location = useLocation();
@@ -21,18 +22,7 @@ export default function Header() {
         </h1>
 
         <div className="hidden md:flex w-full flex-row justify-between items-center">
-          <form
-            role="search"
-            className="flex items-center w-full max-w-sm lg:max-w-xl bg-white border border-gray-300 rounded-lg px-3 py-2 focus-within:border-blue-500 transition box-border"
-          >
-            <LoupeIcon className="size-5 text-gray-400 mr-2" />
-
-            <input
-              type="search"
-              placeholder="Introduce un libro, autor, usuario..."
-              className="w-full outline-none bg-transparent text-sm"
-            />
-          </form>
+          <SearchBar />
 
           <div className="flex flex-row gap-4 justify-center items-center">
             <BellIcon className="size-8 shrink-0 text-gray-700 cursor-pointer  " />
