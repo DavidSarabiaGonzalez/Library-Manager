@@ -1,8 +1,16 @@
 interface AvailablePillProps {
-  available: string;
+  available?: string;
+  quantity?: number;
 }
 
-export function AvailablePill({ available }: AvailablePillProps) {
+export function AvailablePill({
+  available = "",
+  quantity = 0,
+}: AvailablePillProps) {
+  {
+    if (available == "") available = quantity > 0 ? "AVAILABLE" : "BORROWED";
+  }
+
   let style: string;
   switch (available) {
     case "AVAILABLE":
