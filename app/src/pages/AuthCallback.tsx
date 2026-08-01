@@ -7,9 +7,6 @@ export default function AuthCallback() {
       const { data, error } = await supabase.auth.exchangeCodeForSession(
         window.location.href,
       );
-
-      console.log(data);
-      console.log(error);
     }
 
     handleAuth();
