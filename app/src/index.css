@@ -24,3 +24,16 @@ body {
     grid-template-rows: 10vh auto;
   }
 }
+
+table,
+td,
+th,
+tr {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+thead {
+  background-color: gray;
+  font: bold;
+}
