@@ -9,8 +9,6 @@ export function ProtectedRoute({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
-      console.log("SESSION:", data.session);
-
       setSession(data.session);
       setLoading(false);
     });
