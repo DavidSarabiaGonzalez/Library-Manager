@@ -9,3 +9,10 @@ export async function getViewDashboard() {
   if (error) throw new Error("Error al contar");
   return data;
 }
+
+export async function getViewBooks() {
+  const { data, error } = await supabase.from("books_list").select("*");
+
+  if (error) throw new Error("Error al recibir los datos de los libros");
+  return data;
+}
