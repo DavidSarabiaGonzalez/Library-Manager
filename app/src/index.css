@@ -25,6 +25,20 @@ body {
   }
 }
 
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+tr:nth-child(even) {
+  background-color: darkkhaki;
+}
+
+th {
+  text-align: left;
+  box-sizing: content-box;
+}
+
 thead {
   background-color: gray;
   font: bold;

@@ -3,10 +3,10 @@ interface AvailablePillProps {
   quantity?: number;
 }
 
-export function AvailablePill({
-  available = "",
-  quantity = 0,
-}: AvailablePillProps) {
+export function AvailablePill(
+  { available = "", quantity = 0 }: AvailablePillProps,
+  { ...props },
+) {
   {
     if (available == "") available = quantity > 0 ? "AVAILABLE" : "BORROWED";
   }
@@ -36,6 +36,8 @@ export function AvailablePill({
   }
 
   return (
-    <p className={`text-center rounded-xl w-25 mt-2 ${style}`}>{available}</p>
+    <p className={`text-center rounded-xl w-25 mt-2 ${style}`} {...props}>
+      {available}
+    </p>
   );
 }

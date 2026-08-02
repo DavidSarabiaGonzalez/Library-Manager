@@ -34,9 +34,9 @@ export default function Books() {
         </header>
 
         <main>
-          <table className="border">
-            <thead className="border">
-              <tr className="border">
+          <table className="border text-left">
+            <thead className="border text-left">
+              <tr className="border text-left">
                 <th className="px-4 py-2">Cover</th>
                 <th className="px-4 py-2">Titulo</th>
                 <th className="px-4 py-2">ISBN</th>
@@ -52,18 +52,25 @@ export default function Books() {
               {books.map((book: Book) => {
                 return (
                   <tr key={book.id}>
-                    <td>
-                      <img src={book.cover_url} alt="" className="h-20" />
+                    <td className="px-4 py-2">
+                      <img
+                        src={book.cover_url}
+                        alt=""
+                        className="h-20 aspect-53.33/80"
+                      />
                     </td>
-                    <td>{book.title}</td>
-                    <td>{book.isbn}</td>
-                    <td>{book.authors}</td>
-                    <td>{book.categories}</td>
-                    <td>{book.total_copies}</td>
-                    <td>
-                      <AvailablePill quantity={book.available_copies} />
+                    <td className="px-4 py-2">{book.title}</td>
+                    <td className="px-4 py-2">{book.isbn}</td>
+                    <td className="px-4 py-2">{book.authors}</td>
+                    <td className="px-4 py-2">{book.categories}</td>
+                    <td className="px-4 py-2">{book.total_copies}</td>
+                    <td className="px-4 py-2">
+                      <AvailablePill
+                        quantity={book.available_copies}
+                        className="px-4 py-2"
+                      />
                     </td>
-                    <td>accion</td>
+                    <td className="px-4 py-2">accion</td>
                   </tr>
                 );
               })}

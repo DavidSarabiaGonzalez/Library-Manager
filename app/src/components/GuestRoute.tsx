@@ -19,7 +19,11 @@ export function GuestRoute({ children }: { children: React.ReactNode }) {
   }, []);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return (
+      <p className="flex flex-1 items-center justify-center min-w-full">
+        Cargando...
+      </p>
+    );
   }
 
   if (session) {
