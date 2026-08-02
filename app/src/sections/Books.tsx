@@ -37,14 +37,14 @@ export default function Books() {
           <table className="border">
             <thead className="border">
               <tr className="border">
-                <th>Cover</th>
-                <th>Titulo</th>
-                <th>ISBN</th>
-                <th>Autor</th>
-                <th>Categoria</th>
-                <th>Cantidad</th>
-                <th>Disponibilidad</th>
-                <th>Acciones</th>
+                <th className="px-4 py-2">Cover</th>
+                <th className="px-4 py-2">Titulo</th>
+                <th className="px-4 py-2">ISBN</th>
+                <th className="px-4 py-2">Autor</th>
+                <th className="px-4 py-2">Categoria</th>
+                <th className="px-4 py-2">Cantidad</th>
+                <th className="px-4 py-2">Disponibilidad</th>
+                <th className="px-4 py-2">Acciones</th>
               </tr>
             </thead>
 
