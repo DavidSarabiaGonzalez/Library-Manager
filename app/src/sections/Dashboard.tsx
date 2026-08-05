@@ -67,8 +67,8 @@ export default function DashBoard() {
         />
       </section>
 
-      <section className=" grid grid-cols-1 lg:grid-cols-5 justify-center items-center w-full h-auto gap-6">
-        <article className="border border-gray-300 aspect-auto w-full h-full box-border p-4 col-span-3 rounded-md flex flex-col justify-between gap-4">
+      <section className=" grid grid-cols-1 lg:grid-cols-5 justify-center items-center min-w-full h-auto gap-6">
+        <article className="border border-gray-300 aspect-auto w-full h-full box-border p-4 lg:col-span-3 rounded-md flex flex-col justify-between gap-4">
           <div className="flex flex-row justify-between items-center">
             <h2 className="text-sm font-bold sm:text-base lg:text-lg md:text-3xl">
               Prestamos evolucion
@@ -88,7 +88,7 @@ export default function DashBoard() {
           <ChartComponent data={loansData} />
         </article>
 
-        <article className="border border-gray-300 aspect-auto w-full h-full box-border p-4 rounded-md col-span-2 flex flex-col justify-start items-start">
+        <article className="border border-gray-300 aspect-auto max-w-full h-full box-border p-4 rounded-md lg:col-span-2 flex flex-col justify-start items-start">
           <h2 className="text-sm font-bold sm:text-bqase lg:text-lg md:text-3xl">
             Popular
           </h2>
@@ -110,7 +110,7 @@ export default function DashBoard() {
         </article>
       </section>
 
-      <section className=" grid lg:grid-cols-5 grid-cols-1 justify-center items-center w-full gap-6">
+      <section className=" grid lg:grid-cols-5 grid-cols-1 justify-center items-center max-w-full gap-6">
         <article className="border border-gray-300 aspect-auto w-full h-full box-border p-4  col-span-3 rounded-md">
           <h2 className="text-sm font-bold sm:text-base lg:text-lg md:text-3xl">
             Actividad reciente

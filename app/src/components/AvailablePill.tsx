@@ -1,12 +1,17 @@
-interface AvailablePillProps {
+import type { HTMLAttributes } from "react";
+
+interface AvailablePillProps extends HTMLAttributes<HTMLParagraphElement> {
   available?: string;
   quantity?: number;
 }
 
-export function AvailablePill(
-  { available = "", quantity = 0 }: AvailablePillProps,
-  { ...props },
-) {
+export function AvailablePill({
+  available = "",
+  quantity = 0,
+
+  className,
+  ...props
+}: AvailablePillProps) {
   {
     if (available == "") available = quantity > 0 ? "AVAILABLE" : "BORROWED";
   }
@@ -36,7 +41,10 @@ export function AvailablePill(
   }
 
   return (
-    <p className={`text-center rounded-xl w-25 mt-2 ${style}`} {...props}>
+    <p
+      className={`text-center rounded-xl w-25 ${style} ${className}`}
+      {...props}
+    >
       {available}
     </p>
   );

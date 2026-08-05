@@ -34,8 +34,8 @@ export default function Books() {
         </header>
 
         <main>
-          <table className="border text-left">
-            <thead className="border text-left">
+          <table className="border-2 border-gray-300 text-left rounded-lg">
+            <thead className="text-left bg-gray-300/80 font-bold">
               <tr className="border text-left">
                 <th className="px-4 py-2">Cover</th>
                 <th className="px-4 py-2">Titulo</th>
@@ -51,7 +51,7 @@ export default function Books() {
             <tbody>
               {books.map((book: Book) => {
                 return (
-                  <tr key={book.id}>
+                  <tr key={book.id} className="border-b-2 border-gray-300">
                     <td className="px-4 py-2">
                       <img
                         src={book.cover_url}
@@ -67,7 +67,7 @@ export default function Books() {
                     <td className="px-4 py-2">
                       <AvailablePill
                         quantity={book.available_copies}
-                        className="px-4 py-2"
+                        className="px-4 py-2 "
                       />
                     </td>
                     <td className="px-4 py-2">accion</td>
